@@ -49,3 +49,18 @@ describe 'editing photos' do
 	end
 
 end
+
+describe 'deleting photos' do
+
+	before do
+		Photo.create(title:'Hello World')
+	end
+
+  it "removes a photo when a user clicks a delete link" do
+    visit '/photos'
+    click_link 'Delete'
+    expect(page).not_to have_content 'Hello World'
+    expect(page).to have_content 'Photo deleted successfully'
+  end
+
+end

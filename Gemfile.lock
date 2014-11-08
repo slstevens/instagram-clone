@@ -116,6 +116,8 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    rspec-collection_matchers (1.0.0)
+      rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.1.7)
       rspec-support (~> 3.1.0)
     rspec-expectations (3.1.2)
@@ -181,6 +183,7 @@ DEPENDENCIES
   jquery-rails (~> 4.0.0.beta2)
   pg
   rails (= 4.2.0.beta2)
+  rspec-collection_matchers
   rspec-rails
   sass-rails (~> 5.0.0.beta1)
   sdoc (~> 0.4.0)
