@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', git: 'https://github.com/plataformatec/devise.git', :branch => 'lm-rails-4-2'
 gem 'omniauth-facebook'
+gem 'paperclip'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -47,5 +48,7 @@ group :development, :test do
 	gem 'capybara'
 	gem 'rspec-collection_matchers'
 	gem 'warden'
+	gem 'poltergeist'
+	gem 'database_cleaner'
 end
 
