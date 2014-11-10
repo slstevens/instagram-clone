@@ -65,6 +65,11 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cliver (0.3.2)
@@ -179,6 +184,7 @@ GEM
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rmagick (2.13.3)
     rspec-collection_matchers (1.0.0)
       rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.1.7)
@@ -244,6 +250,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
+  carrierwave
   cloudinary
   coffee-rails (~> 4.0.0)
   database_cleaner
@@ -255,6 +262,7 @@ DEPENDENCIES
   pg
   poltergeist
   rails (= 4.2.0.beta2)
+  rmagick
   rspec-collection_matchers
   rspec-rails
   sass-rails (~> 5.0.0.beta1)
