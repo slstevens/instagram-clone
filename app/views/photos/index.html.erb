@@ -2,8 +2,7 @@
   <% @photos.each do |photo| %>
     <h2> <%= photo.title %> </h2>
     <%= link_to "Like", photo_likes_path(photo), class: 'likes-link' %>
-    <%= image_tag photo.image_url.to_s %>
-    <%= image_tag photo.image_url(:thumb).to_s %>
+    <%= image_tag photo.image_url(:glasses_facev2).to_s %>
     Snapped by <%= photo.user.email %>
     <span class="likes_count"> <%= photo.likes.count %> </span> likes
     <%if current_user == photo.user%>
