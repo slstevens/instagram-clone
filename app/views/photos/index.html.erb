@@ -1,31 +1,32 @@
 <% if @photos.any? %>
   <% @photos.each do |photo| %>
     <h2> <%= photo.title %> </h2>
-		<%= link_to "Like", photo_likes_path(photo), class: 'likes-link' %>
-		<%= image_tag photo.image.url(:medium) %>
-		Snapped by <%= photo.user.email %>
+    <%= link_to "Like", photo_likes_path(photo), class: 'likes-link' %>
+    <%= image_tag photo.image.url(:medium) %>
+    Snapped by <%= photo.user.email %>
     <span class="likes_count"> <%= photo.likes.count %> </span> likes
     <%if current_user == photo.user%>
     <%= link_to "Edit", edit_photo_path(photo) %>
     <%= link_to "Delete", photo_path(photo), method: :delete %>
     <%end%>
-		<%= link_to "Comment", new_photo_comment_path(photo) %>    
+    <%= link_to "Comment", new_photo_comment_path(photo) %>    
 
-		<h3>Comments for <%= photo.title %></h3>
-			<% if photo.comments.any? %>
-			  <ul>
-			    <% photo.comments.each do |comment| %>
-			      <li>
-			        <%= comment.comments %>
-			        <%if current_user == comment.user%>
-			        <%= link_to "Delete", photo_comment_path(photo, comment), method: :delete %>
-			        <%end%>
-			      </li>
-			    <% end %>
-			  </ul>
-			<% else %>
-			  <p>No comments.</p>
-			<% end %>
+    <h3>Comments for <%= photo.title %></h3>
+      <% if photo.comments.any? %>
+        <ul>
+          <% photo.comments.each do |comment| %>
+            <li>
+              <%= comment.comments %>
+              <%= comment.user.email %>
+              <%if current_user == comment.user%>
+              <%= link_to "Delete", photo_comment_path(photo, comment), method: :delete %>
+              <%end%>
+            </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>No comments.</p>
+      <% end %>
   <% end %>
 <% else %>
   No photos yet

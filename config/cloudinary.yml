@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: instaclone
+  api_key: '544231349388186'
+  api_secret: VY3jS0A2UF4zlG9R2z8y2kP2NPQ
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: instaclone
+  api_key: '544231349388186'
+  api_secret: VY3jS0A2UF4zlG9R2z8y2kP2NPQ
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: instaclone
+  api_key: '544231349388186'
+  api_secret: VY3jS0A2UF4zlG9R2z8y2kP2NPQ
+  enhance_image_tag: true
+  static_image_support: false
